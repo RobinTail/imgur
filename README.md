@@ -27,7 +27,7 @@ Sample Imgur client shows categories, images and videos with flexible preview gr
 * Follow the URL: [https://api.imgur.com/oauth2/addclient](https://api.imgur.com/oauth2/addclient)
 * Fill the form. Select the option "Anonymous usage without user authentication"
 * Create new file /source/settings.jsx
-* Fill it with this text (where YOUR_API_KEY is the API key given by Imgur):
+* Fill it with this text (where YOUR_API_KEY is the API key given by Imgur)
 
    ```
    module.exports = {

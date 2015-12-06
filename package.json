@@ -1,14 +1,13 @@
 {
-  "description": "This is the test server on Express",
-  "name": "serverExpress",
-  "version": "0.1.1",
-  "homepage": "",
+  "description": "Sample Imgur client",
+  "name": "imgur",
+  "version": "0.1.2",
+  "homepage": "https://github.com/RobinTail/imgur",
   "bugs": {
     "url": "",
     "email": ""
   },
-  "license": "private",
-  "private": true,
+  "license": "MIT",
   "author": {
     "name": "Robin Tail",
     "email": "robin_tail@me.com",
@@ -21,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/RobinTail/imgur.git"
   },
   "dependencies": {
     "babel-core": "5.8.x",

@@ -2,8 +2,6 @@ var express = require('express');
 var app = express();
 var routes = require('./routes');
 
-process.title = "serverExpress";
-
 function logger(req, res, next)
 {
     console.log("Requested %s for %s", req.method, req.originalUrl );

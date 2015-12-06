@@ -17,7 +17,7 @@ Sample Imgur client
 
 # Installation
 * Clone this repository
-* Follow the URL: https://api.imgur.com/oauth2/addclient
+* Follow the URL: [https://api.imgur.com/oauth2/addclient](https://api.imgur.com/oauth2/addclient)
 * Fill the form. Select the option "Anonymous usage without user authentication"
 * Create new file /source/settings.jsx
 * Fill it with this text (where YOUR_API_KEY is the API key given by Imgur):
@@ -29,14 +29,10 @@ module.exports = {
 * Execute these commands (this will install required modules and Webpack CLI)
 ```
 npm install
-npm install webpack -g
 ```
-* Execute command (this will build the application)
-```
-webpack
 ```
 * Execute command (this will launch webserver on port 8080)
 ```
-node server.js
+npm start
 ```
-* Follow the URL: http://localhost:8080 and have fun ^_^
+* Follow the URL: [http://localhost:8080](http://localhost:8080) and have fun ^_^

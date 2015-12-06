@@ -11,8 +11,8 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "stop": "killall -kill serverExpress"
+    "start": "webpack && node server.js",
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",

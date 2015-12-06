@@ -1,0 +1,23 @@
+.grid-tile {
+  text-align: center;
+  background-color: rgba(0,0,0, 0.5);
+  cursor: pointer;
+
+  img, video {
+    min-height: 100%;
+  }
+
+  & > div > div {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+
+  & > svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50% !important;
+    height: 50% !important;
+  }
+}

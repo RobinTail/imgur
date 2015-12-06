@@ -1,0 +1,16 @@
+.comment {
+  margin-bottom: 5px;
+
+  .comment-rate {
+    float: right;
+    font-size: 14px;
+    margin: 3px;
+    color: rgba(0, 0, 0, 0.5);
+
+    .material-icons {
+      color: inherit !important;
+      font-size: inherit !important;
+      vertical-align: bottom;
+    }
+  }
+}

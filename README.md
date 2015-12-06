@@ -1,8 +1,15 @@
 # Imgur
-Sample Imgur client
+Sample Imgur client shows categories, images and videos with flexible preview grid, comments hierarchy.
 
-# Features
+# Demo
+[![Screen 1](https://raw.githubusercontent.com/RobinTail/imgur/master/images/demo/screen1-pre.png)](https://raw.githubusercontent.com/RobinTail/imgur/master/images/demo/screen1.png)
+[![Screen 2](https://raw.githubusercontent.com/RobinTail/imgur/master/images/demo/screen2-pre.png)](https://raw.githubusercontent.com/RobinTail/imgur/master/images/demo/screen2.png)
+[![Screen 3-1](https://raw.githubusercontent.com/RobinTail/imgur/master/images/demo/screen3-1-pre.png)](https://raw.githubusercontent.com/RobinTail/imgur/master/images/demo/screen3-1.png)
+[![Screen 3-2](https://raw.githubusercontent.com/RobinTail/imgur/master/images/demo/screen3-2-pre.png)](https://raw.githubusercontent.com/RobinTail/imgur/master/images/demo/screen3-2.png)
+
+# Technologies
 * Express webserver
+* Webpack dev middleware
 * React (with React-Router)
 * Flux (with Reflux)
 * Material-UI (Material Degisn UI)

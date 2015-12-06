@@ -26,7 +26,7 @@ module.exports = {
     apiKey: 'YOUR_API_KEY'
 };
 ```
-* Execute these commands (this will install required modules and Webpack CLI)
+* Execute these commands (this will install required modules)
 ```
 npm install
 ```

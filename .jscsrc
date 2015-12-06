@@ -1,0 +1,7 @@
+{
+    "preset": "google",
+    "esnext": true,
+    "fileExtensions": [".js", ".jsx"],
+    "excludeFiles": ["node_modules/**"],
+    "validateIndentation": 4
+}

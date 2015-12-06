@@ -1,53 +1,57 @@
 {
-  "description": "Sample Imgur client",
-  "name": "imgur",
-  "version": "0.1.2",
-  "homepage": "https://github.com/RobinTail/imgur",
-  "license": "MIT",
-  "author": {
-    "name": "Robin Tail",
-    "email": "robin_tail@me.com",
-    "url": "http://robintail.cz"
-  },
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "webpack": "webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/RobinTail/imgur.git"
-  },
-  "dependencies": {
-    "babel-core": "5.8.x",
-    "babel-loader": "5.3.x",
-    "css-loader": "0.21.x",
-    "express": "4.8.x",
-    "history": "1.13.x",
-    "lodash": "3.10.x",
-    "material-ui": "0.13.x",
-    "node-sass": "^3.4.2",
-    "react": "0.14.x",
-    "react-addons-create-fragment": "0.14.x",
-    "react-addons-css-transition-group": "0.14.x",
-    "react-addons-pure-render-mixin": "0.14.x",
-    "react-addons-transition-group": "0.14.x",
-    "react-addons-update": "0.14.x",
-    "react-dom": "0.14.x",
-    "react-router": "latest",
-    "react-tap-event-plugin": "^0.2.1",
-    "reflux": "0.3.x",
-    "sass-loader": "3.1.x",
-    "style-loader": "0.13.x",
-    "webpack": "1.12.x",
-    "webpack-dev-middleware": "^1.4.0",
-    "whatwg-fetch": "0.10.x"
-  },
-  "engines": {
-    "npm": "2.14.x",
-    "node": "4.1.x"
-  },
-  "os": [
-    "!win32"
-  ]
+    "description": "Sample Imgur client",
+    "name": "imgur",
+    "version": "0.1.2",
+    "homepage": "https://github.com/RobinTail/imgur",
+    "license": "MIT",
+    "author": {
+        "name": "Robin Tail",
+        "email": "robin_tail@me.com",
+        "url": "http://robintail.cz"
+    },
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "webpack": "webpack",
+        "jscs": "jscs ./"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/RobinTail/imgur.git"
+    },
+    "dependencies": {
+        "babel-core": "5.8.x",
+        "babel-loader": "5.3.x",
+        "css-loader": "0.21.x",
+        "express": "4.8.x",
+        "history": "1.13.x",
+        "lodash": "3.10.x",
+        "material-ui": "0.13.x",
+        "node-sass": "^3.4.2",
+        "react": "0.14.x",
+        "react-addons-create-fragment": "0.14.x",
+        "react-addons-css-transition-group": "0.14.x",
+        "react-addons-pure-render-mixin": "0.14.x",
+        "react-addons-transition-group": "0.14.x",
+        "react-addons-update": "0.14.x",
+        "react-dom": "0.14.x",
+        "react-router": "latest",
+        "react-tap-event-plugin": "^0.2.1",
+        "reflux": "0.3.x",
+        "sass-loader": "3.1.x",
+        "style-loader": "0.13.x",
+        "webpack": "1.12.x",
+        "webpack-dev-middleware": "^1.4.0",
+        "whatwg-fetch": "0.10.x"
+    },
+    "devDependencies": {
+        "jscs": "^2.6.0"
+    },
+    "engines": {
+        "npm": "2.14.x",
+        "node": "4.1.x"
+    },
+    "os": [
+        "!win32"
+    ]
 }

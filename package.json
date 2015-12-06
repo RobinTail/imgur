@@ -11,7 +11,7 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "webpack && node server.js",
+    "start": "node server.js",
     "webpack": "webpack"
   },
   "repository": {
@@ -22,14 +22,11 @@
     "babel-core": "5.8.x",
     "babel-loader": "5.3.x",
     "css-loader": "0.21.x",
-    "node-sass": "^3.4.2",
-    "sass-loader": "3.1.x",
-    "style-loader": "0.13.x",
-    "webpack": "1.12.x",
     "express": "4.8.x",
     "history": "1.13.x",
     "lodash": "3.10.x",
     "material-ui": "0.13.x",
+    "node-sass": "^3.4.2",
     "react": "0.14.x",
     "react-addons-create-fragment": "0.14.x",
     "react-addons-css-transition-group": "0.14.x",
@@ -40,6 +37,10 @@
     "react-router": "latest",
     "react-tap-event-plugin": "^0.2.1",
     "reflux": "0.3.x",
+    "sass-loader": "3.1.x",
+    "style-loader": "0.13.x",
+    "webpack": "1.12.x",
+    "webpack-dev-middleware": "^1.4.0",
     "whatwg-fetch": "0.10.x"
   },
   "engines": {

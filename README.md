@@ -28,17 +28,23 @@ Sample Imgur client shows categories, images and videos with flexible preview gr
 * Fill the form. Select the option "Anonymous usage without user authentication"
 * Create new file /source/settings.jsx
 * Fill it with this text (where YOUR_API_KEY is the API key given by Imgur):
-```
-module.exports = {
-    apiKey: 'YOUR_API_KEY'
-};
-```
+
+   ```
+   module.exports = {
+       apiKey: 'YOUR_API_KEY'
+   };
+   ```
+   
 * Execute these commands (this will install required modules)
-```
-npm install
-```
+
+   ```
+   npm install
+   ```
+
 * Execute command (this will launch webserver on port 8080)
-```
-npm start
-```
+
+   ```
+   npm start
+   ```
+   
 * Follow the URL: [http://localhost:8080](http://localhost:8080) and have fun ^_^

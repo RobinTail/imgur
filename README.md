@@ -30,7 +30,6 @@ module.exports = {
 ```
 npm install
 ```
-```
 * Execute command (this will launch webserver on port 8080)
 ```
 npm start

@@ -3,10 +3,6 @@
   "name": "imgur",
   "version": "0.1.2",
   "homepage": "https://github.com/RobinTail/imgur",
-  "bugs": {
-    "url": "",
-    "email": ""
-  },
   "license": "MIT",
   "author": {
     "name": "Robin Tail",

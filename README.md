@@ -24,10 +24,10 @@ Sample Imgur client shows categories, images and videos with flexible preview gr
 * Due to security reasons this repository does not contain Imgur API key, so you have to register your own.
 
 # Installation
-* Clone this repository
-* Follow the URL: [https://api.imgur.com/oauth2/addclient](https://api.imgur.com/oauth2/addclient)
-* Fill the form. Select the option "Anonymous usage without user authentication"
-* Create new file /source/settings.jsx
+* Clone this repository.
+* Follow the URL: [https://api.imgur.com/oauth2/addclient](https://api.imgur.com/oauth2/addclient).
+* Fill the form. Select the option "Anonymous usage without user authentication".
+* Create new file: /source/settings.jsx
 * Fill it with this text (where YOUR_API_KEY is the API key given by Imgur)
 
    ```
@@ -36,13 +36,13 @@ Sample Imgur client shows categories, images and videos with flexible preview gr
    };
    ```
    
-* Execute these commands (this will install required modules)
+* Execute this command (this will install required modules)
 
    ```
    npm install
    ```
 
-* Execute command (this will launch webserver on port 8080)
+* Execute command (this will launch the webserver on port 8080)
 
    ```
    npm start

@@ -4,17 +4,19 @@ var AnimatedDiv = require('./animated-div/animated-div.jsx');
 
 module.exports = React.createClass({
     render: function() {
-       return   <AnimatedDiv>
-                        {this.renderComments()}
-                </AnimatedDiv>;
+        return (
+            <AnimatedDiv>
+            {this.renderComments()}
+            </AnimatedDiv>
+        );
 
-   },
-   renderComments: function() {
-       return this.props.comments
-           .filter(function(comment){
+    },
+    renderComments: function() {
+        return this.props.comments
+            .filter(function(comment) {
                 return comment.show;
-           }).map(function(comment){
-               return <Comment {...comment} key={comment.id} />
-           });
-   }
+            }).map(function(comment) {
+                return <Comment {...comment} key={comment.id} />;
+            });
+    }
 });

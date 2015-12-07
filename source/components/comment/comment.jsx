@@ -13,34 +13,58 @@ module.exports = React.createClass({
     getInitialState: function() {
         return {
             collapsed: true
-        }
+        };
     },
     render: function() {
-            var rate =  <span className="comment-rate">
-                            <FontIcon className="material-icons">thumb_up</FontIcon> {this.props.ups}
-                            <br />
-                            {this.renderChildrenCount()}
-                        </span>;
-            return  <Card className="comment"
+        var rate = (
+                    <span className='comment-rate'>
+                        <FontIcon
+                            className='material-icons'
+                        >
+                            thumb_up
+                        </FontIcon>
+                        &nbsp;{this.props.ups}<br />
+                        {this.renderChildrenCount()}
+                    </span>
+        );
+        return (
+                <Card
+                    className='comment'
                     style={{
-                        marginLeft: (this.props.depth > 3 ? 3 : this.props.depth) * 50 + 'px',
-                        cursor: this.props.childrenCount ? "pointer" : "auto"
+                        marginLeft: (
+                            this.props.depth > 3 ?
+                            3 : this.props.depth
+                        ) * 50 + 'px',
+                        cursor: this.props.childrenCount ? 'pointer' : 'auto'
                     }}
                     onClick={this.toggleCollapse}
-                    >
-                        {rate}
-                        <CardHeader title={this.props.author} avatar={<Avatar>{this.props.author[0]}</Avatar>} />
-                        <CardText style={{paddingTop: 0}}>
-                            <div>{this.props.comment}</div>
-                        </CardText>
-                    </Card>;
+                >
+                    {rate}
+                    <CardHeader
+                        title={this.props.author}
+                        avatar={<Avatar>{this.props.author[0]}</Avatar>}
+                    />
+                    <CardText style={{paddingTop: 0}}>
+                        <div>{this.props.comment}</div>
+                    </CardText>
+                </Card>
+        );
     },
     renderChildrenCount: function() {
-            if (this.props.childrenCount) {
-                return <span><FontIcon className="material-icons">chat_bubble</FontIcon> {this.props.childrenCount}</span>
-            } else {
-                return null;
-            }
+        if (this.props.childrenCount) {
+            return (
+                <span>
+                    <FontIcon
+                        className='material-icons'
+                    >
+                        chat_bubble
+                    </FontIcon>
+                    &nbsp;{this.props.childrenCount}
+                </span>
+            );
+        } else {
+            return null;
+        }
     },
     toggleCollapse: function() {
         if (this.state.collapsed) {
@@ -50,7 +74,7 @@ module.exports = React.createClass({
         }
         this.setState({
             collapsed: !this.state.collapsed
-        })
+        });
     }
 
 });

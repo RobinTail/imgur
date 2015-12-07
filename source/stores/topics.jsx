@@ -5,9 +5,9 @@ var Actions = require('../actions.jsx');
 module.exports = Reflux.createStore({
     listenables: [Actions],
     topics: [],
-    getTopics: function(){
+    getTopics: function() {
         return Api.get('topics/defaults')
-                .then(function(json){
+                .then(function(json) {
                     this.topics = json.data;
                     this.triggerChange();
                 }.bind(this));

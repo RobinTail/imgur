@@ -3,7 +3,7 @@ var Header = require('./header/header.jsx');
 var Topics = require('./topics.jsx');
 var Modal = require('./modal.jsx');
 
-var injectTapEventPlugin = require("react-tap-event-plugin");
+var injectTapEventPlugin = require('react-tap-event-plugin');
 var ThemeManager = require('material-ui/lib/styles/theme-manager');
 var Theme = require('./material-ui-theme.jsx');
 
@@ -14,7 +14,7 @@ var Theme = require('./material-ui-theme.jsx');
 injectTapEventPlugin();
 
 module.exports = React.createClass({
-    childContextTypes : {
+    childContextTypes: {
         muiTheme: React.PropTypes.object
     },
     getChildContext() {
@@ -23,11 +23,13 @@ module.exports = React.createClass({
         };
     },
     render: function() {
-        return <div>
-                    <Header />
-                    {this.content()}
-                    <Modal />
-               </div>
+        return (
+            <div>
+                <Header />
+                {this.content()}
+                <Modal />
+            </div>
+        );
     },
     content: function() {
         if (this.props.children) {

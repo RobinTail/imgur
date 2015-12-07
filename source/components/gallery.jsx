@@ -15,7 +15,7 @@ module.exports =  React.createClass({
         return {
             images: [],
             columns: 3
-        }
+        };
     },
     componentWillMount: function() {
         Actions.getGallery(this.props.params.id);
@@ -24,27 +24,28 @@ module.exports =  React.createClass({
     componentWillReceiveProps: function(nextProps) {
         Actions.getGallery(nextProps.params.id);
     },
-    render: function(){
-        return      <GridList
-                    cols={this.state.columns}
-                    cellHeight={400}>
-                        {this.renderImages()}
-                    </GridList>
+    render: function() {
+        return (
+            <GridList
+                cols={this.state.columns}
+                cellHeight={400}>
+                {this.renderImages()}
+            </GridList>
+        );
     },
-    renderImages: function(){
-        return this.state.images.map(function(image){
-           return <Preview key={image.id} {...image} />
-
+    renderImages: function() {
+        return this.state.images.map(function(image) {
+            return <Preview key={image.id} {...image} />;
         });
     },
     onChange: function() {
         var columns = this.state.columns;
-        switch(WindowStore.size){
-            case "xs": columns = 1; break;
-            case "sm": columns = 2; break;
-            case "md": columns = 3; break;
-            case "lg": columns = 4; break;
-            case "xl": columns = 8; break;
+        switch (WindowStore.size) {
+            case 'xs': columns = 1; break;
+            case 'sm': columns = 2; break;
+            case 'md': columns = 3; break;
+            case 'lg': columns = 4; break;
+            case 'xl': columns = 8; break;
         }
         this.setState({
             images: GalleryStore.gallery,

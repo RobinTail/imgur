@@ -12,44 +12,55 @@ module.exports = React.createClass({
         Reflux.listenTo(Store, 'onChange'),
         Router.History
     ],
-    getInitialState: function(){
+    getInitialState: function() {
         return {
             isLoaded: false,
             topics: []
-        }
+        };
     },
-    componentWillMount: function(){
+    componentWillMount: function() {
         Actions.getTopics();
     },
-    render: function(){
-        return  <AnimatedList>
-                    {this.renderTopics()}
-                </AnimatedList>
+    render: function() {
+        return (
+            <AnimatedList>
+                {this.renderTopics()}
+            </AnimatedList>
+        );
     },
     renderTopics: function() {
-        if (this.state.isLoaded)
-        {
+        if (this.state.isLoaded) {
             if (this.state.topics.length) {
-                return this.state.topics.map(function (topic) {
-                    return <ListItem onClick={this.handleClick.bind(null, topic.id)} key={topic.id} primaryText={topic.name} secondaryText={topic.description} />
-                }.bind(this))
+                return this.state.topics.map(function(topic) {
+                    return (
+                        <ListItem
+                            onClick={this.handleClick.bind(null, topic.id)}
+                            key={topic.id}
+                            primaryText={topic.name}
+                            secondaryText={topic.description}
+                        />
+                    );
+                }.bind(this));
             } else {
-                return <ListItem primaryText="Nothing to show" secondaryText="Maybe something went wrong" />
+                return (
+                    <ListItem
+                        primaryText='Nothing to show'
+                        secondaryText='Maybe something went wrong'
+                    />
+                );
 
             }
         } else {
-            return <Loading />
+            return <Loading />;
         }
     },
-    onChange: function(event, data)
-    {
+    onChange: function(event, data) {
         this.setState({
             isLoaded: true,
             topics: data
         });
     },
-    handleClick: function(id)
-    {
+    handleClick: function(id) {
         this.history.pushState(null, '/topics/' + id);
     }
 });

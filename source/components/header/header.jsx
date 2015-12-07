@@ -15,42 +15,59 @@ module.exports = React.createClass({
         Router.History
     ],
     getInitialState: function() {
-       return {
-           topics: []
-       }
+        return {
+            topics: []
+        };
     },
     componentWillMount: function() {
         Actions.getTopics();
     },
-    render: function(){
-       return <AppBar
-               style={{marginBottom: 10}}
-               title="ImgUr"
-               iconElementLeft={<IconButton onClick={this.handleHomeClick}><FontIcon className="material-icons">home</FontIcon></IconButton>}
-               iconElementRight={<IconMenu iconButtonElement={<IconButton><FontIcon className="material-icons">menu</FontIcon></IconButton>}>
-                                    {this.renderTopics()}
-                                </IconMenu>
-                            }
-               />;
+    render: function() {
+        return (
+            <AppBar
+                style={{marginBottom: 10}}
+                title='ImgUr'
+                iconElementLeft={
+                    <IconButton onClick={this.handleHomeClick}>
+                        <FontIcon className='material-icons'>home</FontIcon>
+                    </IconButton>
+                }
+                iconElementRight={
+                    <IconMenu iconButtonElement={
+                        <IconButton>
+                            <FontIcon className='material-icons'>menu</FontIcon>
+                        </IconButton>
+                    }>
+                        {this.renderTopics()}
+                    </IconMenu>
+                }
+            />
+        );
     },
-    onChange: function(event, data){
+    onChange: function(event, data) {
         this.setState({
             topics: data
-        })
+        });
     },
-    renderTopics: function(){
+    renderTopics: function() {
         if (this.state.topics.length) {
-            return this.state.topics.map(function (topic) {
-                return <MenuItem key={topic.id} primaryText={topic.name} onClick={this.handleTopicClick.bind(null, topic.id)} />
+            return this.state.topics.map(function(topic) {
+                return (
+                    <MenuItem
+                        key={topic.id}
+                        primaryText={topic.name}
+                        onClick={this.handleTopicClick.bind(null, topic.id)}
+                    />
+                );
             }.bind(this));
         } else {
-            return <MenuItem primaryText="Nothing to show" />
+            return <MenuItem primaryText='Nothing to show' />;
         }
     },
-    handleHomeClick: function(){
+    handleHomeClick: function() {
         this.history.pushState(null, '/');
     },
-    handleTopicClick: function(id){
+    handleTopicClick: function(id) {
         this.history.pushState(null, '/topics/' + id);
     }
 });

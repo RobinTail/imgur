@@ -9,26 +9,26 @@ module.exports = window.api = {
     get: function(url) {
         return fetch(rootUrl + url, {
             headers: {
-                'Authorization' : 'Client-ID ' + Settings.apiKey
+                'Authorization': 'Client-ID ' + Settings.apiKey
             }
         })
-        .then(function(res){
+        .then(function(res) {
             if (res.status >= 200 && res.status < 300) {
-                return res
+                return res;
             } else {
                 var error = new Error(res.statusText);
                 error.res = res;
                 throw error;
             }
         })
-        .then(function(res){
+        .then(function(res) {
             return res.json();
         })
-        .catch(function(e){
+        .catch(function(e) {
             //alert("Fetch error: " + e.message);
             Actions.updateModal('Api error', 'Fetch failed: ' + e.message);
             console.log(e);
-            return {data:[]};
-        })
+            return {data: []};
+        });
     }
 };

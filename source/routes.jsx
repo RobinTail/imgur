@@ -12,9 +12,9 @@ var Details = require('./components/details/details.jsx');
 
 module.exports = (
     <Router history={createHistory()}>
-        <Route path="/" component={Main}>
-            <Route path="topics/:id" component={Gallery} />
-            <Route path="images/:id" component={Details} />
+        <Route path='/' component={Main}>
+            <Route path='topics/:id' component={Gallery} />
+            <Route path='images/:id' component={Details} />
         </Route>
     </Router>
 );

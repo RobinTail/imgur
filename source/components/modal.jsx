@@ -7,23 +7,28 @@ module.exports = React.createClass({
     mixins: [
         Reflux.listenTo(Store, 'onChange')
     ],
-    getInitialState: function()
-    {
+    getInitialState: function() {
         return {
-            title: "",
-            message: "",
+            title: '',
+            message: '',
             show: false
-        }
+        };
     },
     render: function() {
         if (this.state.show) {
-            return <Dialog
-                title={this.state.title}
-                modal={false}
-                actions={[{ text: 'OK' }]}
-                openImmediately={true}>
-                {this.state.message}
-            </Dialog>
+            return (
+                <Dialog
+                    title={this.state.title}
+                    modal={false}
+                    actions={
+                        [
+                            {text: 'OK'}
+                        ]
+                    }
+                    openImmediately={true}>
+                    {this.state.message}
+                </Dialog>
+            );
         } else {
             return null;
         }
@@ -33,6 +38,6 @@ module.exports = React.createClass({
             title: data.title,
             message: data.message,
             show: true
-        })
+        });
     }
 });

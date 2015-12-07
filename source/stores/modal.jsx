@@ -4,8 +4,8 @@ var Actions = require('../actions.jsx');
 module.exports = Reflux.createStore({
     listenables: [Actions],
     modal: {
-        title: "",
-        message: ""
+        title: '',
+        message: ''
     },
     updateModal: function(title, message) {
         this.modal = {

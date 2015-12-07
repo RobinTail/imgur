@@ -17,6 +17,7 @@ Sample Imgur client shows categories, images and videos with flexible preview gr
 * SASS styles (SCSS)
 * Fetch
 * Dynamic grid columns with window size handler
+* JSCS
 
 # Requirements
 * NPM

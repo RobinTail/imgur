@@ -42,10 +42,16 @@ Sample Imgur client shows categories, images and videos with flexible preview gr
    npm install
    ```
 
-* Execute command (this will launch the webserver on port 8080)
+* Execute command (this will launch the webserver on port 8080 with Webpack Dev Middleware)
 
    ```
    npm start
+   ```
+   
+   **or** (this will build webpack app and launch webserver)
+   
+   ```
+   npm run build
    ```
    
 * Follow the URL: [http://localhost:8080](http://localhost:8080) and have fun ^_^
